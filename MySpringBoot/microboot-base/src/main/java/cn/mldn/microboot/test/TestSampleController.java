@@ -9,6 +9,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import cn.mldn.microboot.StartSpringBootMain;
+import cn.mldn.microboot.controller.HelloController;
 import junit.framework.TestCase;
 
 /**
@@ -25,11 +26,15 @@ import junit.framework.TestCase;
 public class TestSampleController {
 	// 使用注解
 	@Resource
-	private StartSpringBootMain startSpringBootMain;
+//	private StartSpringBootMain startSpringBootMain;
+	private HelloController helloController;
 
 	// 测试的注解
 	@Test
 	public void testHome() {
-		TestCase.assertEquals(this.startSpringBootMain.home(), "www.mldn.cn");
+		TestCase.assertEquals(this.helloController.home(), "www.mldn.cn");
 	}
+	
+	
+	
 }

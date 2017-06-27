@@ -39,6 +39,23 @@
 					<encode>${project.build.sourceEncoding}</encode>
 				</configuration>
 			</plugin>
+<!-- 该插件的主要功能是进行项目的打包发布处理 Start -->
+			<plugin> 
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration> <!-- 设置程序执行的主类 -->
+					<mainClass>cn.mldn.microboot.StartSpringBootMain</mainClass>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- 该插件的主要功能是进行项目的打包发布处理 End -->
+			
 		</plugins>
 	</build>
 	<modules>
